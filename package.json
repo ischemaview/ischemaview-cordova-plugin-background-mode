@@ -1,9 +1,9 @@
 {
-  "name": "ischamaview-cordova-plugin-background-mode",
+  "name": "ischemaview-cordova-plugin-background-mode",
   "version": "0.8.0",
   "description": "Prevent apps from going to sleep in background.",
   "cordova": {
-    "id": "ischamaview-cordova-plugin-background-mode",
+    "id": "ischemaview-cordova-plugin-background-mode",
     "platforms": [
       "ios",
       "android",
