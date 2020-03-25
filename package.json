@@ -1,9 +1,9 @@
 {
-  "name": "cordova-plugin-background-mode",
+  "name": "ischamaview-cordova-plugin-background-mode",
   "version": "0.7.3",
   "description": "Prevent apps from going to sleep in background.",
   "cordova": {
-    "id": "cordova-plugin-background-mode",
+    "id": "ischamaview-cordova-plugin-background-mode",
     "platforms": [
       "ios",
       "android",
@@ -37,5 +37,8 @@
   "bugs": {
     "url": "https://github.com/katzer/cordova-plugin-background-mode/issues"
   },
-  "homepage": "https://github.com/katzer/cordova-plugin-background-mode#readme"
+  "homepage": "https://github.com/katzer/cordova-plugin-background-mode#readme",
+  "publishConfig": {
+    "registry": "https://nexus.infrastructure.rapid-sys.com/repository/npm-internal"
+  }
 }
