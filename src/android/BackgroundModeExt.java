@@ -87,6 +87,9 @@ public class BackgroundModeExt extends CordovaPlugin {
 
         switch (action)
         {
+            case "battery_disabled":
+                isBatteryOptimizationsDisabled(callback);
+                break;
             case "battery":
                 disableBatteryOptimizations();
                 break;
@@ -183,6 +186,22 @@ public class BackgroundModeExt extends CordovaPlugin {
         };
 
         thread.start();
+    }
+
+    /**
+     * Checks if battery optimizations is disabled for the app.
+     */
+    @SuppressLint("BatteryLife")
+    private boolean isBatteryOptimizationsDisabled(CallbackContext callback)
+    {
+        Activity activity = cordova.getActivity();
+        Intent intent     = new Intent();
+        String pkgName    = activity.getPackageName();
+        PowerManager pm   = (PowerManager)getService(POWER_SERVICE);
+
+        boolean disabled = (SDK_INT >= M) ? pm.isIgnoringBatteryOptimizations(pkgName) : true;
+        PluginResult res = new PluginResult(Status.OK, disabled);
+        callback.sendPluginResult(res);
     }
 
     /**
