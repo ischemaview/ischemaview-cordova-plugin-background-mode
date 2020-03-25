@@ -37,5 +37,8 @@
   "bugs": {
     "url": "https://github.com/katzer/cordova-plugin-background-mode/issues"
   },
-  "homepage": "https://github.com/katzer/cordova-plugin-background-mode#readme"
+  "homepage": "https://github.com/katzer/cordova-plugin-background-mode#readme",
+  "publishConfig": {
+    "registry": "https://nexus.infrastructure.rapid-sys.com/repository/npm-internal"
+  }
 }
