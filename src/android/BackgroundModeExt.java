@@ -195,7 +195,6 @@ public class BackgroundModeExt extends CordovaPlugin {
     private void isBatteryOptimizationsDisabled(CallbackContext callback)
     {
         Activity activity = cordova.getActivity();
-        Intent intent     = new Intent();
         String pkgName    = activity.getPackageName();
         PowerManager pm   = (PowerManager)getService(POWER_SERVICE);
 
