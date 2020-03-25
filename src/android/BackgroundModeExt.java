@@ -192,7 +192,7 @@ public class BackgroundModeExt extends CordovaPlugin {
      * Checks if battery optimizations is disabled for the app.
      */
     @SuppressLint("BatteryLife")
-    private boolean isBatteryOptimizationsDisabled(CallbackContext callback)
+    private void isBatteryOptimizationsDisabled(CallbackContext callback)
     {
         Activity activity = cordova.getActivity();
         Intent intent     = new Intent();
