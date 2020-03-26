@@ -41,9 +41,10 @@
             </feature>
         </config-file>
 
+        <preference name="UI_BACKGROUND_MODE" default="audio" />
         <config-file target="*-Info.plist" parent="UIBackgroundModes">
             <array>
-                <string>audio</string>
+                <string>$UI_BACKGROUND_MODE</string>
             </array>
         </config-file>
 
