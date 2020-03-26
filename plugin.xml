@@ -34,18 +34,18 @@
 
     <!-- ios -->
     <platform name="ios">
-        <preference name="UI_BACKGROUND_MODE" default="fetch" />
-        <config-file target="*-Info.plist" parent="UIBackgroundModes">
-            <array>
-                <string>$UI_BACKGROUND_MODE</string>
-            </array>
-        </config-file>
-
         <config-file target="config.xml" parent="/*">
             <feature name="BackgroundMode">
                 <param name="ios-package" value="APPBackgroundMode" onload="true" />
                 <param name="onload" value="true" />
             </feature>
+        </config-file>
+
+        <preference name="UI_BACKGROUND_MODE" default="fetch" />
+        <config-file target="*-Info.plist" parent="UIBackgroundModes">
+            <array>
+                <string>$UI_BACKGROUND_MODE</string>
+            </array>
         </config-file>
 
         <resource-file src="appbeep.wav" />
